@@ -31,8 +31,21 @@ function searchWeather(event) {
     console.log(wind);
     var humidity = response.main.humidity;
     console.log(humidity);
+
+    // five day forecast data
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&appid=" + apiKey + "&units=metric";
+
+    var forecastData = {};
+    $.ajax({
+        url: forecastURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+});
 });
 }
+
+
 
 // event listener for search button
 searchForm.on('submit', searchWeather);
