@@ -22,16 +22,22 @@ function searchWeather(event) {
     // response data - name, description, weather icon, temperature, humidity, wind speed
     var cityName = response.name;
     console.log(cityName);
+    document.getElementById("cityName").innerHTML = cityName;
     var temperature = response.main.temp;
-    console.log(temperature)
+    console.log(temperature);
+    document.getElementById("temperature").innerHTML = temperature;
     var description = response.weather[0].description;
     console.log(description);
+    document.getElementById("description").innerHTML = description;
     var icon = response.weather[0].icon;
     console.log(icon);
+    document.getElementById("icon").innerHTML = icon;
     var wind = response.wind.speed;
     console.log(wind);
+    document.getElementById("wind").innerHTML = wind;
     var humidity = response.main.humidity;
     console.log(humidity);
+    document.getElementById("humidity").innerHTML = humidity;
     var latitude = response.coord.lat.toFixed(2);
     console.log(latitude);
     var longitude = response.coord.lon.toFixed(2);
