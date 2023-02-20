@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@300;400;600&display=swap');
 
 
-h1, h2, #search-input {
+h1, h2, h3, #search-input {
     font-family: "Gloock", serif;
-}
-
-h3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 10px;
 }
 
 p {

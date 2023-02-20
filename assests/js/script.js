@@ -4,9 +4,25 @@ var searchForm = $('#search-form');
 // API Key
 var apiKey = "7642fb4c9ad776474d4917a39a975982";
 
-// Dates
+// Current Date
 var currentDate = moment().format('dddd Do MMMM');
 $('#currentDate').append(currentDate);
+
+// Dates for forecast
+var forecastOne = moment().add(1, 'day').format('dddd Do MMMM');
+$('#forecastOne').append(forecastOne);
+
+var forecastTwo = moment().add(2, 'day').format('dddd Do MMMM');
+$('#forecastTwo').append(forecastTwo);
+
+var forecastThree = moment().add(3, 'day').format('dddd Do MMMM');
+$('#forecastThree').append(forecastThree);
+
+var forecastFour = moment().add(4, 'day').format('dddd Do MMMM');
+$('#forecastFour').append(forecastFour);
+
+var forecastFive = moment().add(5, 'day').format('dddd Do MMMM');
+$('#forecastFive').append(forecastFive);
 
 // function to search for weather data
 function searchWeather(event) {
