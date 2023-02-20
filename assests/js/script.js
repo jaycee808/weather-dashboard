@@ -48,7 +48,7 @@ function searchWeather(event) {
     console.log(temperature);
     document.getElementById("temperature").innerHTML = "Temperature: " + temperature + "&deg";
 
-    var description = response.weather[0].description.toUpperCase();
+    var description = response.weather[0].description;
     console.log(description);
     document.getElementById("description").innerHTML = description;
 
@@ -64,11 +64,6 @@ function searchWeather(event) {
     console.log(humidity);
     document.getElementById("humidity").innerHTML = "Humidity: " + humidity + "%";
 
-    var latitude = response.coord.lat.toFixed(2);
-    console.log(latitude);
-    
-    var longitude = response.coord.lon.toFixed(2);
-    console.log(longitude);
 });
 }
 
@@ -94,66 +89,100 @@ function forecastData(event) {
         // Day 1 Variables
         var forecastDayOneDate = response.list[8].dt_txt.split(' ')[0];
         console.log(forecastDayOneDate);
-        var descriptionDayOne = response.list[8].weather[0].description;
-        var iconDayOne = response.list[8].weather[0].icon;
-        var temperatureDayOne = response.list[8].main.temp;
-        var humidityDayOne = response.list[8].main.humidity;
-        console.log(descriptionDayOne);
-        console.log(iconDayOne);
-        console.log(temperatureDayOne);
-        console.log(humidityDayOne);
+        
+
+        var descriptionForecastOne = response.list[8].weather[0].description;
+        var iconForecastOne = response.list[8].weather[0].icon;
+        var temperatureForecastOne = response.list[8].main.temp;
+        var humidityForecastOne = response.list[8].main.humidity;
+        
+        document.getElementById("descriptionForecastOne").innerHTML = descriptionForecastOne;
+        document.getElementById("temperatureForecastOne").innerHTML = "Temperature: " + temperatureForecastOne + "&deg";
+        document.getElementById("humidityForecastOne").innerHTML = "Humidity: " + humidityForecastOne + "%";
+        document.getElementById("iconForecastOne").src = "http://openweathermap.org/img/wn/" + iconForecastOne + "@4x.png";
+
+        console.log(descriptionForecastOne);
+        console.log(iconForecastOne);
+        console.log(temperatureForecastOne);
+        console.log(humidityForecastOne);
 
         // Day 2 Variables
         var forecastDayTwoDate = response.list[16].dt_txt.split(' ')[0];
         console.log(forecastDayTwoDate);
 
-        var descriptionDayTwo = response.list[16].weather[0].description;
-        var iconDayTwo = response.list[16].weather[0].icon;
-        var temperatureDayTwo = response.list[16].main.temp;
-        var humidityDayTwo = response.list[16].main.humidity;
-        console.log(descriptionDayTwo);
-        console.log(iconDayTwo);
-        console.log(temperatureDayTwo);
-        console.log(humidityDayTwo);
+        var descriptionForecastTwo = response.list[16].weather[0].description;
+        var iconForecastTwo = response.list[16].weather[0].icon;
+        var temperatureForecastTwo = response.list[16].main.temp;
+        var humidityForecastTwo = response.list[16].main.humidity;
+
+        document.getElementById("descriptionForecastTwo").innerHTML = descriptionForecastTwo;
+        document.getElementById("temperatureForecastTwo").innerHTML = "Temperature: " + temperatureForecastTwo + "&deg";
+        document.getElementById("humidityForecastTwo").innerHTML = "Humidity: " + humidityForecastTwo + "%";
+        document.getElementById("iconForecastTwo").src = "http://openweathermap.org/img/wn/" + iconForecastTwo + "@4x.png";
+
+        console.log(descriptionForecastTwo);
+        console.log(iconForecastTwo);
+        console.log(temperatureForecastTwo);
+        console.log(humidityForecastTwo);
 
         // Day 3 Variables
         var forecastDayThreeDate = response.list[24].dt_txt.split(' ')[0];
         console.log(forecastDayThreeDate);
 
-        var descriptionDayThree = response.list[24].weather[0].description;
-        var iconDayThree = response.list[24].weather[0].icon;
-        var temperatureDayThree = response.list[24].main.temp;
-        var humidityDayThree = response.list[24].main.humidity;
-        console.log(descriptionDayThree);
-        console.log(iconDayThree);
-        console.log(temperatureDayThree);
-        console.log(humidityDayThree);
+        var descriptionForecastThree = response.list[24].weather[0].description;
+        var iconForecastThree = response.list[24].weather[0].icon;
+        var temperatureForecastThree = response.list[24].main.temp;
+        var humidityForecastThree = response.list[24].main.humidity;
+
+        document.getElementById("descriptionForecastThree").innerHTML = descriptionForecastThree;
+        document.getElementById("temperatureForecastThree").innerHTML = "Temperature: " + temperatureForecastThree + "&deg";
+        document.getElementById("humidityForecastThree").innerHTML = "Humidity: " + humidityForecastThree + "%";
+        document.getElementById("iconForecastThree").src = "http://openweathermap.org/img/wn/" + iconForecastThree + "@4x.png";
+
+        console.log(descriptionForecastThree);
+        console.log(iconForecastThree);
+        console.log(temperatureForecastThree);
+        console.log(humidityForecastThree);
 
         // Day 4 Variables
         var forecastDayFourDate = response.list[32].dt_txt.split(' ')[0];
         console.log(forecastDayFourDate);
 
-        var descriptionDayFour = response.list[32].weather[0].description;
-        var iconDayFour = response.list[32].weather[0].icon;
-        var temperatureDayFour = response.list[32].main.temp;
-        var humidityDayFour = response.list[32].main.humidity;
-        console.log(descriptionDayFour);
-        console.log(iconDayFour);
-        console.log(temperatureDayFour);
-        console.log(humidityDayFour);
+        var descriptionForecastFour = response.list[32].weather[0].description;
+        var iconForecastFour = response.list[32].weather[0].icon;
+        var temperatureForecastFour = response.list[32].main.temp;
+        var humidityForecastFour = response.list[32].main.humidity;
+
+        document.getElementById("descriptionForecastFour").innerHTML = descriptionForecastFour;
+        document.getElementById("temperatureForecastFour").innerHTML = "Temperature: " + temperatureForecastFour + "&deg";
+        document.getElementById("humidityForecastFour").innerHTML = "Humidity: " + humidityForecastFour + "%";
+        document.getElementById("iconForecastFour").src = "http://openweathermap.org/img/wn/" + iconForecastFour + "@4x.png";
+
+        console.log(descriptionForecastFour);
+        console.log(iconForecastFour);
+        console.log(temperatureForecastFour);
+        console.log(humidityForecastFour);
 
         // Day 5 Variables
         var forecastDayFiveDate = response.list[39].dt_txt.split(' ')[0];
         console.log(forecastDayFiveDate);
+        
 
-        var descriptionDayFive = response.list[32].weather[0].description;
-        var iconDayFive = response.list[32].weather[0].icon;
-        var temperatureDayFive = response.list[32].main.temp;
-        var humidityDayFive = response.list[32].main.humidity;
-        console.log(descriptionDayFive);
-        console.log(iconDayFive);
-        console.log(temperatureDayFive);
-        console.log(humidityDayFive);
+        var descriptionForecastFive = response.list[39].weather[0].description;
+        var iconForecastFive = response.list[39].weather[0].icon;
+        var temperatureForecastFive = response.list[39].main.temp;
+        var humidityForecastFive = response.list[39].main.humidity;
+        
+        document.getElementById("descriptionForecastFive").innerHTML = descriptionForecastFive;
+        document.getElementById("temperatureForecastFive").innerHTML = "Temperature: " + temperatureForecastFive + "&deg";
+        document.getElementById("humidityForecastFive").innerHTML = "Humidity: " + humidityForecastFive + "%";
+        document.getElementById("iconForecastFive").src = "http://openweathermap.org/img/wn/" + iconForecastFive + "@4x.png";
+
+        console.log(descriptionForecastFive);
+        console.log(iconForecastFive);
+        console.log(temperatureForecastFive);
+        console.log(humidityForecastFive);
+
 });
 }
 
