@@ -4,6 +4,10 @@ var searchForm = $('#search-form');
 // API Key
 var apiKey = "7642fb4c9ad776474d4917a39a975982";
 
+// Dates
+var currentDate = moment().format('dddd Do MMMM');
+$('#currentDate').append(currentDate);
+
 // function to search for weather data
 function searchWeather(event) {
     event.preventDefault();
@@ -26,7 +30,7 @@ function searchWeather(event) {
 
     var temperature = response.main.temp;
     console.log(temperature);
-    document.getElementById("temperature").innerHTML = temperature + "&deg";
+    document.getElementById("temperature").innerHTML = "Temperature: " + temperature + "&deg";
 
     var description = response.weather[0].description.toUpperCase();
     console.log(description);
@@ -38,11 +42,11 @@ function searchWeather(event) {
 
     var wind = response.wind.speed;
     console.log(wind);
-    document.getElementById("wind").innerHTML = wind + "m/s";
+    document.getElementById("wind").innerHTML = "Wind Speed: " + wind + "m/s";
 
     var humidity = response.main.humidity;
     console.log(humidity);
-    document.getElementById("humidity").innerHTML = humidity + "%";
+    document.getElementById("humidity").innerHTML = "Humidity: " + humidity + "%";
 
     var latitude = response.coord.lat.toFixed(2);
     console.log(latitude);
