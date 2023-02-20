@@ -31,21 +31,55 @@ function searchWeather(event) {
     console.log(wind);
     var humidity = response.main.humidity;
     console.log(humidity);
+    var latitude = response.coord.lat.toFixed(2);
+    console.log(latitude);
+    var longitude = response.coord.lon.toFixed(2);
+    console.log(longitude);
 
-    // five day forecast data
-    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&appid=" + apiKey + "&units=metric";
-
-    var forecastData = {};
-    $.ajax({
-        url: forecastURL,
-        method: "GET"
-    }).then(function(response) {
-        console.log(response);
 });
+}
+
+// function to generate weather forecast for the next five days
+function forecastData(event) {
+    event.preventDefault();
+
+    var userInput = $("#search-input").val(); 
+    console.log(userInput);
+        
+    
+    // five day forecast data
+        var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&appid=" + apiKey + "&units=metric";
+
+        console.log(forecastURL);
+    
+        var forecastData = {};
+        $.ajax({
+            url: forecastURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+
+    
+    var forecastDayOne = response.list[8].dt_txt.split(' ')[0];
+    console.log(forecastDayOne);
+
+    var forecastDayTwo = response.list[16].dt_txt.split(' ')[0];
+    console.log(forecastDayTwo);
+
+    var forecastDayThree = response.list[24].dt_txt.split(' ')[0];
+    console.log(forecastDayThree);
+
+    var forecastDayFour = response.list[32].dt_txt.split(' ')[0];
+    console.log(forecastDayFour);
+
+    var forecastDayFive = response.list[39].dt_txt.split(' ')[0];
+    console.log(forecastDayFive);
+
+
 });
 }
 
 
-
 // event listener for search button
 searchForm.on('submit', searchWeather);
+searchForm.on('submit', forecastData);
