@@ -51,11 +51,7 @@ function searchWeather(event) {
     var description = response.weather[0].description;
     console.log(description);
     document.getElementById("description").innerHTML = description;
-
-    var icon = response.weather[0].icon;
-    console.log(icon);
-    document.getElementById("icon").src = "http://openweathermap.org/img/wn/" + icon + "@4x.png";
-
+    
     var wind = response.wind.speed;
     console.log(wind);
     document.getElementById("wind").innerHTML = "Wind Speed: " + wind + "m/s";
