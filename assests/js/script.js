@@ -23,23 +23,30 @@ function searchWeather(event) {
     var cityName = response.name;
     console.log(cityName);
     document.getElementById("cityName").innerHTML = cityName;
+
     var temperature = response.main.temp;
     console.log(temperature);
-    document.getElementById("temperature").innerHTML = temperature;
-    var description = response.weather[0].description;
+    document.getElementById("temperature").innerHTML = temperature + "&deg";
+
+    var description = response.weather[0].description.toUpperCase();
     console.log(description);
     document.getElementById("description").innerHTML = description;
+
     var icon = response.weather[0].icon;
     console.log(icon);
-    document.getElementById("icon").innerHTML = icon;
+    document.getElementById("icon").src = "http://openweathermap.org/img/wn/" + icon + "@4x.png";
+
     var wind = response.wind.speed;
     console.log(wind);
-    document.getElementById("wind").innerHTML = wind;
+    document.getElementById("wind").innerHTML = wind + "m/s";
+
     var humidity = response.main.humidity;
     console.log(humidity);
-    document.getElementById("humidity").innerHTML = humidity;
+    document.getElementById("humidity").innerHTML = humidity + "%";
+
     var latitude = response.coord.lat.toFixed(2);
     console.log(latitude);
+    
     var longitude = response.coord.lon.toFixed(2);
     console.log(longitude);
 });
