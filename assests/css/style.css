@@ -21,6 +21,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 2rem;
 }
 
 #weatherDisplay, #searchBar, #forecastWeather {
@@ -35,4 +36,4 @@ hr {
     #currentWeatherCard  {
         width: 80dvw;
     }
-  }
+}

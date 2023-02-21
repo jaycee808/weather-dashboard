@@ -59,7 +59,6 @@ function searchWeather(event) {
     var humidity = response.main.humidity;
     console.log(humidity);
     document.getElementById("humidity").innerHTML = "Humidity: " + humidity + "%";
-
 });
 }
 
