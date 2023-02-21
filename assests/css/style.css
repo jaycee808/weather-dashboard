@@ -26,3 +26,13 @@ hr {
 #weatherDisplay, #searchBar, #forecastWeather {
     padding: 1.2rem;
 }
+
+#currentWeatherCard {
+    width: 40rem;
+}
+
+@media only screen and (max-width: 800px) {
+    #currentWeatherCard  {
+        width: 80dvw;
+    }
+  }
