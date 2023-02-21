@@ -11,7 +11,7 @@ HTML, CSS, JavaScript, Bootstrap, jQuery, and Moment.js
 ## Screenshot
 
 <p align="center">
-  <img src="./images/screenshot.png" width="350" title="screenshot of application">
+  <img src="./assests/images/screenshot.png" width="350" title="screenshot of application">
 </p>
 
 ## Link to Deployed Site
