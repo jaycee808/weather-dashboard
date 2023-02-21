@@ -23,3 +23,6 @@ hr {
     justify-content: space-evenly;
 }
 
+#weatherDisplay, #searchBar, #forecastWeather {
+    padding: 1.2rem;
+}
