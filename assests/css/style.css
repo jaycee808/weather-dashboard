@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@300;400;600&display=swap');
 
 
-h1, h2, h3, #search-input {
+h1, h2, h3, #search-input, #search-button {
     font-family: "Gloock", serif;
 }
 
 h4, h5, p {
     font-family: "Poppins", sans-serif;
-}
-
-#search-button {
-    font-family: "Gloock", serif;
 }
 
 hr {
@@ -32,6 +28,7 @@ hr {
     width: 40rem;
 }
 
+/* media queries for smaller devices */
 @media only screen and (max-width: 800px) {
     #currentWeatherCard  {
         width: 80dvw;
