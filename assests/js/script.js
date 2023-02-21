@@ -1,4 +1,4 @@
-// variable 
+// variable for search form
 var searchForm = $('#search-form');
 
 // API Key
@@ -29,9 +29,20 @@ $('#forecastFour').append(forecastFour);
 var forecastFive = moment().add(5, 'day').format('dddd Do MMMM');
 $('#forecastFive').append(forecastFive);
 
+// variable for displaying cards
+var weatherDisplay = document.getElementById('weatherDisplay');
+var forecastWeather = document.getElementById('forecastWeather');
+
+// hide display of cards before search
+weatherDisplay.style.display = "none";
+forecastWeather.style.display = "none";
+
 // Function to search for weather data
 function searchWeather(event) {
     event.preventDefault();
+
+    // display weather forecast html element
+    weatherDisplay.style.display = "block";
 
     // variable for user input
     var userInput = $("#search-input").val(); 
@@ -64,6 +75,8 @@ function searchWeather(event) {
 function forecastData(event) {
     event.preventDefault();
 
+    // display weather forecast html element
+    forecastWeather.style.display = "block";
     var userInput = $("#search-input").val(); 
         
     // five day forecast data
